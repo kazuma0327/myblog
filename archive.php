@@ -15,8 +15,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1><?php bloginfo('name') ?></h1>
-            <span class="subheading"><?php bloginfo('description') ?></span>
+            <h1>Category</h1>
+            <span class="subheading"><?php wp_title(''); ?></span>
           </div>
         </div>
       </div>
@@ -46,16 +46,16 @@
           <?php endwhile ?>
           <!-- Pager -->
           <div class="clearfix">
-            <?php  
-            $link = get_previous_posts_link('&larr; 新しい記事へ'); 
-            if($link) {
+            <?php
+            $link = get_previous_posts_link('&larr; 新しい記事へ');
+            if ($link) {
               $links = str_replace('<a', '<a class="btn btn-primary float-left"', $link);
               echo $links;
             }
             ?>
-            <?php  
-            $link = get_next_posts_link('過去の記事へ &rarr;'); 
-            if($link) {
+            <?php
+            $link = get_next_posts_link('過去の記事へ &rarr;');
+            if ($link) {
               $links = str_replace('<a', '<a class="btn btn-primary float-right"', $link);
               echo $links;
             }
